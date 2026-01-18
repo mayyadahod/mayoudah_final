@@ -37,3 +37,34 @@ def insulin_guide(request):
 
 def diabetes_tech(request):
     return render(request, 'accounts/articles/diabetes_tech.html')
+def insulin_resistance_index(request):
+    return render(request, 'accounts/insulin_resistance.html')
+
+def what_is_ir(request):
+    return render(request, 'accounts/articles/what_is_ir.html')
+
+def ir_skin_signs(request):
+    return render(request, 'accounts/articles/ir_skin_signs.html')
+
+def homa_ir_test(request):
+    return render(request, 'accounts/articles/homa_ir_test.html')
+def ir_diet_plan(request):
+    return render(request, 'accounts/articles/ir_diet_plan.html')
+
+def ir_exercise_guide(request):
+    return render(request, 'accounts/articles/ir_exercise_guide.html')
+def blood_pressure_index(request):
+    return render(request, 'accounts/blood_pressure.html')
+def measure_bp_right(request):
+    return render(request, 'accounts/articles/measure_bp_right.html')
+
+def bp_levels_chart(request):
+    return render(request, 'accounts/articles/bp_levels_chart.html')
+def dash_diet(request):
+    return render(request, 'accounts/articles/dash_diet.html')
+
+def salt_and_bp(request):
+    return render(request, 'accounts/articles/salt_and_bp.html')
+
+def bp_emergency(request):
+    return render(request, 'accounts/articles/bp_emergency.html')

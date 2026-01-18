@@ -1,0 +1,71 @@
+{% extends 'accounts/base_article.html' %}
+
+{% block title %}طوارئ ضغط الدم: متى تذهب للمستشفى؟{% endblock %}
+
+{% block content %}
+<style>
+    .emergency-header { background: linear-gradient(135deg, #b71c1c, #d32f2f); color: white; padding: 60px 0; border-radius: 0 0 50px 50px; }
+    .danger-card { background: #fff5f5; border: 2px solid #feb2b2; border-radius: 20px; padding: 25px; margin-bottom: 25px; }
+    .action-step { border-right: 5px solid #d32f2f; background: white; padding: 15px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    .pulse-icon { font-size: 2rem; color: #d32f2f; animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+</style>
+
+<header class="emergency-header text-center shadow">
+    <div class="container">
+        <div class="pulse-icon mb-3"><i class="bi bi-exclamation-triangle-fill"></i></div>
+        <h1 class="fw-bold">ارتفاع الضغط المفاجئ</h1>
+        <p class="lead text-white-50">دليل التصرف السريع في اللحظات الحرجة</p>
+    </div>
+</header>
+
+<div class="container my-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            
+            <div class="danger-card shadow-sm">
+                <h3 class="text-danger fw-bold mb-3">متى تعتبر الحالة "طارئة"؟</h3>
+                <p class="h5 mb-3">إذا كانت قراءة الضغط <strong>180/120</strong> أو أكثر، وظهرت معك أي من الأعراض التالية:</p>
+                <ul class="row list-unstyled">
+                    <li class="col-md-6 mb-2">❌ ألم شديد في الصدر</li>
+                    <li class="col-md-6 mb-2">❌ صداع حاد جداً ومفاجئ</li>
+                    <li class="col-md-6 mb-2">❌ تشوش في الرؤية</li>
+                    <li class="col-md-6 mb-2">❌ ضيق شديد في التنفس</li>
+                    <li class="col-md-6 mb-2">❌ صعوبة في الكلام أو تنميل أطراف</li>
+                    <li class="col-md-6 mb-2">❌ غثيان أو تقيؤ شديد</li>
+                </ul>
+                <div class="alert alert-danger mt-3 mb-0 py-2 fw-bold text-center">
+                    اتصل بالإسعاف أو توجه للمستشفى فوراً! لا تنتظر.
+                </div>
+            </div>
+
+            <h3 class="mt-5 mb-4">ماذا تفعل إذا وجدت ضغطك مرتفعاً بدون أعراض؟</h3>
+            <div class="action-step">
+                <h5>1. اهدأ تماماً</h5>
+                <p class="text-muted mb-0">اجلس في مكان هادئ، تنفس بعمق، ولا تحاول قراءة الضغط كل دقيقة؛ لأن القلق سيرفعه أكثر.</p>
+            </div>
+            
+            <div class="action-step">
+                <h5>2. انتظر 5 دقائق</h5>
+                <p class="text-muted mb-0">أعد القياس مرة أخرى بعد 5 دقائق من الراحة التامة لضمان أن الارتفاع ليس ناتجاً عن مجهود عابر.</p>
+            </div>
+
+            <div class="action-step">
+                <h5>3. تجنب التصرف العشوائي</h5>
+                <p class="text-muted mb-0">لا تأخذ أي جرعات إضافية من الأدوية أو "حبوب تحت اللسان" دون استشارة طبية هاتفية على الأقل، لأن الهبوط المفاجئ قد يكون خطيراً أيضاً.</p>
+            </div>
+
+            <div class="bg-dark text-white p-4 rounded-4 mt-5">
+                <h5><i class="bi bi-info-circle text-warning"></i> معلومة هامة:</h5>
+                <p class="mb-0">الخوف من الجلطة هو ما يرفع الضغط لدى الكثيرين عند رؤية الرقم عالياً. إذا لم يكن هناك "أعراض عصبية أو صدرية"، فغالباً لديك متسع من الوقت للتواصل مع طبيبك وتعديل جرعاتك بهدوء.</p>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="{% url 'blood_pressure_index' %}" class="btn btn-danger btn-lg rounded-pill px-5 shadow">
+                    العودة لفهرس الضغط
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

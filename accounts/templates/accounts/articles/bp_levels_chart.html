@@ -1,0 +1,71 @@
+{% extends 'accounts/base_article.html' %}
+{% block title %}جدول مستويات ضغط الدم المعتمد{% endblock %}
+{% block content %}
+<style>
+    .chart-header { background: linear-gradient(135deg, #455a64, #263238); color: white; padding: 60px 0; border-radius: 0 0 50px 50px; }
+    .status-normal { background-color: #d1e7dd; color: #0f5132; }
+    .status-elevated { background-color: #fff3cd; color: #664d03; }
+    .status-danger { background-color: #f8d7da; color: #842029; font-weight: bold; }
+</style>
+
+<header class="chart-header text-center shadow">
+    <div class="container">
+        <h1 class="fw-bold">ماذا تعني أرقام ضغطك؟</h1>
+        <p class="lead text-light">الدليل المحدث لتصنيف مستويات ضغط الدم</p>
+    </div>
+</header>
+
+<div class="container my-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="table-responsive shadow rounded">
+                <table class="table table-hover border text-center mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>الفئة</th>
+                            <th>الانقباضي (العالي)</th>
+                            <th>الانبساطي (الواطي)</th>
+                            <th>الإجراء المطلوب</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="status-normal">
+                            <td>طبيعي (سليم)</td>
+                            <td>أقل من 120</td>
+                            <td>و أقل من 80</td>
+                            <td>حافظ على نمط حياتك</td>
+                        </tr>
+                        <tr class="status-elevated">
+                            <td>ما قبل الارتفاع</td>
+                            <td>120 - 129</td>
+                            <td>أقل من 80</td>
+                            <td>انتبه لغذائك والملح</td>
+                        </tr>
+                        <tr class="status-danger">
+                            <td>ارتفاع - مرحلة 1</td>
+                            <td>130 - 139</td>
+                            <td>أو 80 - 89</td>
+                            <td>استشارة طبيب + تغيير نمط الحياة</td>
+                        </tr>
+                        <tr class="bg-danger text-white">
+                            <td>ارتفاع - مرحلة 2</td>
+                            <td>140 أو أكثر</td>
+                            <td>أو 90 أو أكثر</td>
+                            <td>علاج دوائي فوري غالباً</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-5 p-4 border-right border-4 border-danger bg-white shadow-sm">
+                <h4><i class="bi bi-exclamation-triangle-fill text-danger"></i> متى تصبح الحالة طارئة؟</h4>
+                <p>إذا تجاوزت القراءة <strong>180/120</strong> ملم زئبق، انتظر 5 دقائق وقس مرة أخرى. إذا استمرت القراءة عالية، اتصل بالإسعاف أو توجه للمستشفى فوراً، خصوصاً لو شعرت بآلام في الصدر أو ضيق تنفس.</p>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="{% url 'blood_pressure_index' %}" class="btn btn-secondary btn-lg rounded-pill px-5 text-white">العودة للفهرس</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,133 @@
+{% extends 'accounts/base_article.html' %}
+
+{% block title %}خطة التعافي: لوكارب وصيام متقطع{% endblock %}
+
+{% block content %}
+<style>
+    /* تحسين الهيدر ليكون أكثر حيوية */
+    .diet-header { 
+        background: linear-gradient(135deg, #1b5e20, #43a047); 
+        color: white; 
+        padding: 80px 0 60px; 
+        border-radius: 0 0 50px 50px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    /* تنسيق الكروت لتظهر كخطوات متسلسلة */
+    .plan-card { 
+        background: white; 
+        border-radius: 20px; 
+        padding: 30px; 
+        margin-bottom: 30px; 
+        border-right: 8px solid #2e7d32; 
+        transition: transform 0.3s ease;
+    }
+    
+    .plan-card:hover { transform: translateY(-5px); }
+
+    /* تنسيق الفترات الزمنية */
+    .time-slot { 
+        background: #e8f5e9; 
+        color: #1b5e20; 
+        font-weight: bold; 
+        padding: 8px 20px; 
+        border-radius: 50px; 
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 15px;
+        border: 1px solid #c8e6c9;
+    }
+
+    /* أيقونات الأقسام */
+    .section-icon {
+        font-size: 2rem;
+        color: #2e7d32;
+        margin-bottom: 15px;
+    }
+
+    .food-list li {
+        margin-bottom: 10px;
+        list-style-type: none;
+        position: relative;
+    }
+    .food-list li::before {
+        content: "✅";
+        margin-left: 10px;
+    }
+</style>
+
+<header class="diet-header text-center shadow">
+    <div class="container">
+        <h1 class="fw-bold display-5">خريطة طريق التعافي</h1>
+        <p class="lead opacity-75">أقوى بروتوكول غذائي لعكس مقاومة الإنسولين علمياً</p>
+    </div>
+</header>
+
+<div class="container my-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            
+            <section class="plan-card shadow-sm">
+                <div class="section-icon"><i class="bi bi-clock-history"></i></div>
+                <h3 class="fw-bold">1. الصيام المتقطع (قاعدة 16/8)</h3>
+                <p>الصيام هو "الممحاة" التي تمسح الدهون المتراكمة حول الكبد والخلايا. عندما تصوم، ينخفض الإنسولين، مما يسمح لهرمون "الجلوكاجون" بالبدء في حرق الدهون.</p>
+                
+                <div class="alert alert-success border-0 shadow-sm mt-3">
+                    <strong>الهدف:</strong> إعطاء البنكرياس فترة راحة طويلة لتقليل مستويات الإنسولين الصائم.
+                </div>
+            </section>
+
+            <section class="plan-card shadow-sm">
+                <div class="section-icon"><i class="bi bi-egg-fried"></i></div>
+                <h3 class="fw-bold">2. ركائز نظام اللوكارب (Low Carb)</h3>
+                <p>نحن لا نمنع الأكل، نحن نختار الأكل الذي لا يستفز الإنسولين:</p>
+                <ul class="food-list p-0">
+                    <li><strong>بروتينات عالية الجودة:</strong> بيض، لحم بلدي، دجاج، أسماك دهنية (سردين/ماكريل).</li>
+                    <li><strong>دهون مشبعة وصحية:</strong> زبدة طبيعية، زيت زيتون بكر، شحم حيواني.</li>
+                    <li><strong>خضروات كثيفة الألياف:</strong> بروكلي، قرنبيط، خس، وفجل.</li>
+                </ul>
+            </section>
+
+            <section class="plan-card shadow-sm border-right-primary" style="border-right-color: #0277bd;">
+                <div class="section-icon text-primary"><i class="bi bi-calendar-check"></i></div>
+                <h3 class="fw-bold text-primary">3. الجدول اليومي المقترح</h3>
+                
+                <div class="mb-4">
+                    <span class="time-slot"><i class="bi bi-moon-stars me-2"></i> 8:00 ص - 12:00 ظ</span>
+                    <p class="fw-bold text-muted">فترة الصيام الذهبية</p>
+                    <p>مسموح فقط بالمشروبات الصفرية (ماء، قهوة سادة، شاي أخضر). يمنع السكر تماماً حتى "الدايت" منه في هذه الفترة.</p>
+                </div>
+
+                <div class="mb-4 border-end border-2 pe-3" style="border-color: #c8e6c9 !important;">
+                    <span class="time-slot"><i class="bi bi-sun me-2"></i> 1:00 ظهراً (الوجبة الأولى)</span>
+                    <p>3 بيضات مقلية بالزبدة + جرجير كثير + نصف أفوكادو أو حفصة زيتون.</p>
+                </div>
+
+                <div class="mb-4 border-end border-2 pe-3" style="border-color: #c8e6c9 !important;">
+                    <span class="time-slot"><i class="bi bi-apple me-2"></i> 5:00 مساءً (سناك ذكي)</span>
+                    <p>حفنة صغيرة من اللوز النيء أو الجوز (عين الجمل).</p>
+                </div>
+
+                <div class="mb-4 border-end border-2 pe-3" style="border-color: #c8e6c9 !important;">
+                    <span class="time-slot"><i class="bi bi-sunset me-2"></i> 8:00 مساءً (الوجبة الأخيرة)</span>
+                    <p>قطعة بروتين مشوية + خضار سوتيه (كوسا وبروكلي) + طبق سلطة كبير بزيت الزيتون والليمون.</p>
+                </div>
+            </section>
+
+            <div class="bg-warning text-dark p-4 rounded-4 shadow-sm mb-5 d-flex align-items-start">
+                <i class="bi bi-lightbulb-fill fs-2 me-3 text-danger"></i>
+                <div>
+                    <h5 class="fw-bold">سر المحترفين: خل التفاح</h5>
+                    <p class="mb-0">خل التفاح العضوي (مع الأم) يساعد على تحسين حساسية الإنسولين في العضلات. تناوله قبل الوجبة بـ 10 دقائق سيغير نتائج تحاليلك القادمة!</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="{% url 'insulin_resistance_index' %}" class="btn btn-success btn-lg rounded-pill px-5 shadow">
+                    <i class="bi bi-arrow-right-circle me-2"></i> العودة لدليل المقاومة
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

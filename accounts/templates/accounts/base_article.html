@@ -9,19 +9,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
     <style>
-        /* تنسيقات عامة للموقع لضمان الاحترافية */
         :root {
             --primary-color: #dc3545;
             --secondary-color: #2c3e50;
+            --accent-color: #f8f9fa;
         }
         
         body {
             background-color: #fdfdfd;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        /* تنسيق الشريط العلوي */
         .navbar-custom {
             background-color: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -33,15 +35,32 @@
             font-size: 1.5rem;
         }
 
-        /* تذييل الصفحة (Footer) */
+        main {
+            flex: 1; /* يضمن بقاء الفوتر في الأسفل حتى لو كان المحتوى قليلاً */
+        }
+
+        /* تنسيق التذييل المطور */
         footer {
             background-color: var(--secondary-color);
             color: white;
-            padding: 40px 0;
+            padding: 40px 0 20px 0;
             margin-top: 50px;
         }
 
-        /* تحسين مظهر الصور في المقالات */
+        .developer-credit {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+            padding-top: 15px;
+            font-family: 'Courier New', Courier, monospace; /* لمسة برمجية */
+            letter-spacing: 1px;
+        }
+
+        .developer-name {
+            color: #ffc107; /* لون ذهبي لتمييز الاسم */
+            font-weight: bold;
+            text-decoration: none;
+        }
+
         .img-fluid-custom {
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -85,7 +104,14 @@
                 <i class="bi bi-twitter mx-2"></i>
                 <i class="bi bi-whatsapp mx-2"></i>
             </div>
-            <small class="text-white-50">جميع الحقوق محفوظة © 2026 - معلومات دقيقة بإشراف طبي</small>
+            <small class="text-white-50 d-block">جميع الحقوق محفوظة © 2026 - معلومات دقيقة بإشراف طبي</small>
+            
+            <div class="developer-credit">
+                <small>
+                    <i class="bi bi-code-slash me-1"></i> Developer: 
+                    <span class="developer-name">Eng Mayyadah AlOdatAllah</span>
+                </small>
+            </div>
         </div>
     </footer>
 

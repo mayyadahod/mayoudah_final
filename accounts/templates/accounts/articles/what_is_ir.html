@@ -1,0 +1,34 @@
+{% extends 'accounts/base_article.html' %}
+{% block title %}ما هي مقاومة الإنسولين؟ شرح مبسط{% endblock %}
+{% block content %}
+<style>
+    .ir-header { background: linear-gradient(135deg, #ef6c00, #ff9800); color: white; padding: 60px 0; border-radius: 0 0 50px 50px; }
+    .concept-card { background: #fff3e0; border-right: 6px solid #ef6c00; padding: 25px; border-radius: 15px; margin-bottom: 25px; }
+</style>
+
+<header class="ir-header text-center shadow">
+    <div class="container">
+        <h1 class="fw-bold">مقاومة الإنسولين: عندما لا تسمع الخلايا!</h1>
+        <p class="lead">كيف يتحول "مفتاح الطاقة" إلى عبء على جسدك؟</p>
+    </div>
+</header>
+
+<div class="container my-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <div class="concept-card shadow-sm">
+                <h3>قصة "الجرس المكسور"</h3>
+                <p>تخيل أن الإنسولين هو شخص يطرق باب الخلية ليخبرها أن "السكر وصل، افتحي الباب ليدخل". في الحالة الطبيعية، تفتح الخلية الباب فوراً.</p>
+                <p>في حالة <strong>المقاومة</strong>، يطرق الإنسولين الباب مراراً وتكراراً، لكن الخلية (بسبب الدهون المتراكمة حولها أو الالتهابات) لا تسمع! هنا يضطر البنكرياس لصرخ (إفراز كميات ضخمة من الإنسولين) فقط ليجعل الخلية تفتح بابها.</p>
+            </div>
+
+            <h3>ماذا يحدث لجسدك في هذه اللحظة؟</h3>
+            <ul>
+                <li><strong>تعب مستمر:</strong> لأن السكر (الطاقة) عالق في الدم ولا يدخل الخلايا.</li>
+                <li><strong>جوع سريع:</strong> الدماغ يشعر أن الخلايا جائعة فيرسل إشارات لطلب المزيد من السكريات.</li>
+                <li><strong>تخزين دهون:</strong> الإنسولين العالي هو "هرمون بناء وتخزين"، فيقوم بتحويل السكر الزائد إلى دهون فوراً، خاصة حول الخصر.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

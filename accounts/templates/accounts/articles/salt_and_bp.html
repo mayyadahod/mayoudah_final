@@ -1,0 +1,40 @@
+{% extends 'accounts/base_article.html' %}
+{% block title %}الملح والضغط: الحقيقة الكاملة{% endblock %}
+{% block content %}
+<style>
+    .salt-header { background: linear-gradient(135deg, #455a64, #607d8b); color: white; padding: 60px 0; border-radius: 0 0 50px 50px; }
+    .warning-box { background: #fff3e0; border-right: 6px solid #ff9800; padding: 20px; border-radius: 12px; }
+</style>
+
+<header class="salt-header text-center shadow">
+    <div class="container">
+        <h1 class="fw-bold">الملح.. العدو الخفي؟</h1>
+        <p class="lead">لماذا يرفع الصوديوم ضغط الدم وكيف نسيطر عليه؟</p>
+    </div>
+</header>
+
+<div class="container my-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <h3>ماذا يفعل الملح في شرايينك؟</h3>
+            <p>عندما تأكل الكثير من الملح، يحتفظ جسمك بالماء لتخفيف الصوديوم. هذا الماء الزائد يزيد من حجم الدم، مما يضغط بقوة أكبر على جدران الشرايين.</p>
+
+            <div class="warning-box my-4">
+                <h4>القاعدة الدولية:</h4>
+                <p class="mb-0">يجب ألا يتجاوز استهلاكك اليومي من الملح <strong>2300 ملجم</strong> (حوالي ملعقة صغيرة واحدة)، ويفضل أن يكون 1500 ملجم لمن يعانون من الارتفاع فعلياً.</p>
+            </div>
+
+            <h3>أين يختبئ الملح؟</h3>
+            <ul>
+                <li>الصلصات الجاهزة (الكاتشب والمايونيز).</li>
+                <li>المعلبات (الفول المعلب، التونة في محلول ملحي).</li>
+                <li>الأجبان المملحة واللحوم المصنعة.</li>
+            </ul>
+
+            <div class="text-center mt-5">
+                <a href="{% url 'blood_pressure_index' %}" class="btn btn-secondary btn-lg rounded-pill px-5">العودة للفهرس</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

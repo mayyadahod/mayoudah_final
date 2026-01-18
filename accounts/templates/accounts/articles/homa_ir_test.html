@@ -1,0 +1,43 @@
+{% extends 'accounts/base_article.html' %}
+{% block title %}تحليل HOMA-IR: المقياس الدقيق لمقاومة الإنسولين{% endblock %}
+{% block content %}
+<style>
+    .test-header { background: linear-gradient(135deg, #0277bd, #039be5); color: white; padding: 60px 0; border-radius: 0 0 50px 50px; }
+    .formula-box { background: #e1f5fe; border: 2px dashed #0277bd; padding: 20px; text-align: center; border-radius: 15px; font-family: sans-serif; }
+</style>
+
+<header class="test-header text-center shadow">
+    <div class="container">
+        <h1 class="fw-bold">تحليل HOMA-IR</h1>
+        <p class="lead">كيف يقرأ الأطباء مستويات المقاومة في دمك؟</p>
+    </div>
+</header>
+
+<div class="container my-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <p>لا يكفي فحص السكر الصائم فقط لتشخيص المقاومة. الحل هو تحليل <strong>HOMA-IR</strong> الذي يربط بين السكر الصائم والإنسولين الصائم.</p>
+            
+            <div class="formula-box my-4">
+                <h5>المعادلة الرياضية:</h5>
+                <p class="h4">HOMA-IR = (Glucose × Insulin) / 405</p>
+            </div>
+
+            <h3>كيف تقرأ النتيجة؟</h3>
+            <table class="table table-bordered mt-3 text-center">
+                <thead class="table-primary">
+                    <tr>
+                        <th>النتيجة</th>
+                        <th>التفسير</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>أقل من 1.0</td><td>حساسية إنسولين ممتازة (طبيعي)</td></tr>
+                    <tr><td>1.0 - 1.9</td><td>مقاومة خفيفة (تحتاج انتباه)</td></tr>
+                    <tr><td>أكثر من 2.0</td><td>مقاومة إنسولين واضحة</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

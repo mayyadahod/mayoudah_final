@@ -1,0 +1,79 @@
+{% extends 'accounts/base_article.html' %}
+
+{% block title %}نظام DASH الغذائي لخفض ضغط الدم{% endblock %}
+
+{% block content %}
+<style>
+    .dash-header { background: linear-gradient(135deg, #198754, #2e7d32); color: white; padding: 60px 0; border-radius: 0 0 50px 50px; }
+    .dash-card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; border-right: 6px solid #198754; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .nutrient-badge { background: #e8f5e9; color: #1b5e20; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
+    .food-group-title { color: #198754; font-weight: bold; margin-bottom: 15px; display: flex; align-items: center; }
+    .food-group-title i { margin-left: 10px; font-size: 1.5rem; }
+</style>
+
+<header class="dash-header text-center shadow">
+    <div class="container">
+        <h1 class="fw-bold">نظام DASH الغذائي</h1>
+        <p class="lead">الطريق الطبيعي المثبت علمياً للسيطرة على ضغط الدم</p>
+    </div>
+</header>
+
+<div class="container my-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            
+            <section class="dash-card">
+                <h3>ما هو نظام DASH؟</h3>
+                <p>ليس مجرد حمية لتقليل الملح، بل هو نظام غني بالمعادن التي "تطرد" الصوديوم من جسمك وتريح جدران الشرايين. يركز النظام على ثلاثة معادن ذهبية:</p>
+                <div class="d-flex gap-2 flex-wrap mt-3">
+                    <span class="nutrient-badge">البوتاسيوم</span>
+                    <span class="nutrient-badge">المغنيسيوم</span>
+                    <span class="nutrient-badge">الكالسيوم</span>
+                </div>
+            </section>
+
+            <h3 class="mb-4 mt-5">مكونات الوجبة المثالية في نظام DASH:</h3>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="dash-card">
+                        <div class="food-group-title"><i class="bi bi-tree"></i> الفواكه والخضروات</div>
+                        <p>تناول 4-5 حصص يومياً. ركز على الموز، البرتقال، السبانخ، والبروكلي (مصادر كبرى للبوتاسيوم).</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dash-card">
+                        <div class="food-group-title"><i class="bi bi-moisture"></i> الحبوب الكاملة</div>
+                        <p>خبز القمح الكامل، الشوفان، والأرز البني بدلاً من الدقيق الأبيض لضمان الحصول على الألياف.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dash-card">
+                        <div class="food-group-title"><i class="bi bi-egg-fried"></i> البروتين قليل الدسم</div>
+                        <p>الأسماك، الدواجن بدون جلد، والبقوليات (العدس والحمص). قلل من اللحوم الحمراء.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dash-card">
+                        <div class="food-group-title"><i class="bi bi-cup-straw"></i> الألبان</div>
+                        <p>الزبادي والحليب قليل الدسم (مصدر الكالسيوم الضروري لمرونة الشرايين).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-light p-4 rounded-4 border-start border-4 border-success my-5 shadow-sm">
+                <h4 class="text-success"><i class="bi bi-check2-all"></i> كيف تبدأ اليوم؟</h4>
+                <ol>
+                    <li>استبدل ملح الطعام بالأعشاب والتوابل (ليمون، ثوم، زعتر).</li>
+                    <li>أضف حصة واحدة من الخضار إلى وجبة الغداء وحصة فواكه إلى العشاء.</li>
+                    <li>قلل من الأطعمة المصنعة والمعلبة لأنها "قنابل" صوديوم مخفية.</li>
+                </ol>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="{% url 'blood_pressure_index' %}" class="btn btn-success btn-lg rounded-pill px-5">العودة لدليل الضغط</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
