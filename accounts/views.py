@@ -17,3 +17,23 @@ def diabetes_levels(request):
 
 def hba1c_guide(request):
     return render(request, 'accounts/articles/hba1c_guide.html')
+
+def low_gi_foods(request):
+    return render(request, 'accounts/articles/low_gi_foods.html')
+def bread_alternatives(request):
+    return render(request, 'accounts/articles/bread_alternatives.html')
+def carb_counting(request):
+    return render(request, 'accounts/articles/carb_counting.html')
+def hypo_rule(request):
+    return render(request, 'accounts/articles/hypo_rule.html')
+
+def foot_care(request):
+    return render(request, 'accounts/articles/foot_care.html')
+
+def kidney_eye_care(request):
+    return render(request, 'accounts/articles/kidney_eye_care.html')
+def insulin_guide(request):
+    return render(request, 'accounts/articles/insulin_guide.html')
+
+def diabetes_tech(request):
+    return render(request, 'accounts/articles/diabetes_tech.html')

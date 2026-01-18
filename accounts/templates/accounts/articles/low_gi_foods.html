@@ -1,0 +1,73 @@
+{% extends 'accounts/base_article.html' %}
+
+{% block title %}قائمة الأطعمة منخفضة المؤشر الجلايسيمي{% endblock %}
+
+{% block content %}
+<style>
+    .gi-header { background: linear-gradient(135deg, #28a745, #155724); color: white; padding: 60px 0; border-radius: 0 0 50px 50px; margin-bottom: 40px; }
+    .food-category { background: white; padding: 25px; border-radius: 15px; margin-bottom: 20px; border-right: 8px solid #28a745; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .gi-badge { background-color: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
+    .list-group-item { border: none; border-bottom: 1px solid #eee; padding: 15px 0; display: flex; justify-content: space-between; align-items: center; }
+    .list-group-item:last-child { border-bottom: none; }
+    .danger-zone { background-color: #fff5f5; border-right-color: #dc3545; }
+</style>
+
+<header class="gi-header text-center">
+    <div class="container">
+        <h1 class="display-6 fw-bold">دليل الأطعمة الصديقة للسكر</h1>
+        <p class="lead">قائمة الأطعمة ذات المؤشر الجلايسيمي المنخفض (Low GI)</p>
+    </div>
+</header>
+
+<div class="container pb-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+
+            <div class="food-category">
+                <h3 class="text-success mb-4"><i class="bi bi-leaf"></i> الخضروات (الخيار الأمثل)</h3>
+                <p class="text-muted small">معظم الخضروات الورقية مؤشرها الجلايسيمي أقل من 15، وهي لا ترفع السكر تقريباً.</p>
+                <div class="list-group">
+                    <div class="list-group-item"><span>السبانخ، البروكلي، الملفوف</span> <span class="gi-badge">GI: 15</span></div>
+                    <div class="list-group-item"><span>الطماطم، الخيار، الفلفل</span> <span class="gi-badge">GI: 15</span></div>
+                    <div class="list-group-item"><span>الكوسا، البامية، الباذنجان</span> <span class="gi-badge">GI: 20</span></div>
+                </div>
+            </div>
+
+            <div class="food-category">
+                <h3 class="text-success mb-4"><i class="bi bi-moisture"></i> البقوليات (طاقة مستدامة)</h3>
+                <p class="text-muted small">تعتبر كنزاً لمريض السكري بفضل الألياف والبروتين.</p>
+                <div class="list-group">
+                    <div class="list-group-item"><span>العدس (بني أو أحمر)</span> <span class="gi-badge">GI: 32</span></div>
+                    <div class="list-group-item"><span>الحمص المسلوق</span> <span class="gi-badge">GI: 28</span></div>
+                    <div class="list-group-item"><span>الفول المدمس (بدون خبز أبيض)</span> <span class="gi-badge">GI: 38</span></div>
+                    <div class="list-group-item"><span>الفاصوليا البيضاء</span> <span class="gi-badge">GI: 33</span></div>
+                </div>
+            </div>
+
+            <div class="food-category">
+                <h3 class="text-success mb-4"><i class="bi bi-apple"></i> الفواكه المسموحة</h3>
+                <div class="list-group">
+                    <div class="list-group-item"><span>الكرز، التوت، الفراولة</span> <span class="gi-badge">GI: 25</span></div>
+                    <div class="list-group-item"><span>التفاح (بالقشر)</span> <span class="gi-badge">GI: 38</span></div>
+                    <div class="list-group-item"><span>البرتقال، اليوسفي</span> <span class="gi-badge">GI: 43</span></div>
+                    <div class="list-group-item"><span>الكمثرى</span> <span class="gi-badge">GI: 38</span></div>
+                </div>
+            </div>
+
+            <div class="food-category danger-zone">
+                <h3 class="text-danger mb-4"><i class="bi bi-exclamation-octagon"></i> احذر من هذه البدائل (High GI)</h3>
+                <div class="list-group">
+                    <div class="list-group-item"><span>الخبز الأبيض، الأرز الأبيض</span> <span class="text-danger fw-bold">GI: 75+</span></div>
+                    <div class="list-group-item"><span>البطاطس المقلية أو المهروسة</span> <span class="text-danger fw-bold">GI: 85+</span></div>
+                    <div class="list-group-item"><span>البطيخ، التمر المجفف</span> <span class="text-danger fw-bold">GI: 72+</span></div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="{% url 'diabetes_index' %}" class="btn btn-success btn-lg px-5 shadow-sm rounded-pill">العودة لفهرس الموسوعة</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

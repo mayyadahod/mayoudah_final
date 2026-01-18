@@ -1,0 +1,52 @@
+{% extends 'accounts/base_article.html' %}
+
+{% block title %}دليل العناية اليومية بالقدم السكرية{% endblock %}
+
+{% block content %}
+<style>
+    .foot-header { background: linear-gradient(135deg, #ff9800, #e65100); color: white; padding: 60px 0; border-radius: 0 0 50px 50px; }
+    .check-box { background: #fff8e1; border-right: 5px solid #ffb300; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+    .warning-item { color: #d32f2f; font-weight: bold; }
+</style>
+
+<header class="foot-header text-center shadow">
+    <div class="container">
+        <h1 class="fw-bold">صحة قدميك: استثمارك للحياة</h1>
+        <p class="lead">لماذا تعتبر العناية بالقدم أمراً حيوياً لمريض السكري؟</p>
+    </div>
+</header>
+
+<div class="container my-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <section class="content-section shadow-sm p-4 bg-white rounded">
+                <h2>لماذا القدم تحديداً؟</h2>
+                <p>السكري قد يسبب أمرين خطيرين: <strong>ضعف التروية الدموية</strong> و <strong>تلف الأعصاب</strong>. هذا يعني أنك قد تجرح قدمك ولا تشعر بها، والجرح قد لا يلتئم بسهولة. لذا، فحصك اليومي هو خط الدفاع الأول.</p>
+            </section>
+
+            <h3 class="mt-5 mb-4">قائمة الفحص اليومي (Checklist)</h3>
+            <div class="check-box shadow-sm">
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="bi bi-check-square-fill text-warning me-2"></i> <strong>افحص:</strong> ابحث عن أي احمرار، بثور، جروح، أو تورم بين الأصابع وفي الكعب.</li>
+                    <li class="mb-3"><i class="bi bi-check-square-fill text-warning me-2"></i> <strong>اغسل:</strong> استخدم ماءً فاتراً (اختبر الحرارة بكوعك أولاً) وصابوناً ملطفاً.</li>
+                    <li class="mb-3"><i class="bi bi-check-square-fill text-warning me-2"></i> <strong>جفف:</strong> التجفيف بين الأصابع يمنع نمو الفطريات.</li>
+                    <li class="mb-3"><i class="bi bi-check-square-fill text-warning me-2"></i> <strong>رطب:</strong> استخدم لوشن مرطباً للقدمين لكن <u>تجنب وضعه بين الأصابع</u>.</li>
+                </ul>
+            </div>
+
+            <div class="alert alert-danger">
+                <h4 class="alert-heading">🚫 ممنوعات مريض السكري:</h4>
+                <ul>
+                    <li>لا تمشِ حافي القدمين أبداً، حتى داخل المنزل.</li>
+                    <li>لا تستخدم الماء الساخن جداً.</li>
+                    <li>لا تقص أظافرك بشكل دائري عميق؛ قصها بشكل مستقيم.</li>
+                </ul>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="{% url 'diabetes_index' %}" class="btn btn-warning btn-lg rounded-pill px-5">العودة للفهرس</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

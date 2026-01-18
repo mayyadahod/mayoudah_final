@@ -1,0 +1,119 @@
+{% extends 'accounts/base_article.html' %}
+
+{% block title %}حماية العين والكلى من مضاعفات السكري{% endblock %}
+
+{% block content %}
+<style>
+    /* تحسين الهيدر ليكون أكثر عمقاً */
+    .organ-header { 
+        background: linear-gradient(135deg, #455a64, #263238); 
+        color: white; 
+        padding: 80px 0 60px; 
+        border-radius: 0 0 50px 50px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    /* جعل الكروت أكثر بروزاً ومريحة للعين */
+    .care-card { 
+        border-right: 6px solid #607d8b; /* تغيير من اليسار لليمين لأن الموقع عربي */
+        background: white; 
+        padding: 30px; 
+        border-radius: 15px; 
+        margin-bottom: 30px; 
+        transition: transform 0.3s ease;
+    }
+    
+    .care-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .icon-box {
+        font-size: 2.5rem;
+        color: #607d8b;
+        margin-bottom: 15px;
+    }
+
+    /* تحسين قائمة "الثلاثي المرح" */
+    .golden-rule {
+        background: #1a1a1a;
+        border-radius: 20px;
+        border: 2px solid #ffc107;
+    }
+</style>
+
+<header class="organ-header text-center">
+    <div class="container">
+        <h1 class="fw-bold mb-3">حماية الأعضاء الحيوية</h1>
+        <p class="lead opacity-75">دليلك العلمي لمنع تأثير السكر على شبكية العين وكفاءة الكلى</p>
+    </div>
+</header>
+
+<div class="container my-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            
+            <div class="care-card shadow-sm">
+                <div class="icon-box"><i class="bi bi-eye-fill"></i></div>
+                <h3 class="fw-bold">1. صحة العين (الاعتلال الشبكي السكري)</h3>
+                <p>يؤدي ارتفاع السكر المستمر إلى إضعاف جدران الأوعية الدموية الدقيقة التي تغذي شبكية العين، مما قد يسبب تسرباً للسوائل أو نزيفاً بسيطاً يؤثر على الرؤية.</p>
+                <div class="bg-light p-3 rounded">
+                    <strong>بروتوكول الحماية:</strong>
+                    <ul class="mt-2">
+                        <li>فحص قاع العين "بترطيب الحدقة" مرة كل سنة على الأقل.</li>
+                        <li>مراجعة الطبيب فوراً عند رؤية "ذباب طائر" أو بقع سوداء مفاجئة.</li>
+                        <li>السيطرة على ضغط الدم، فهو المسبب الثاني لتضرر الشبكية بعد السكر.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="care-card shadow-sm">
+                <div class="icon-box"><i class="bi bi-droplet-half"></i></div>
+                <h3 class="fw-bold">2. صحة الكلى (اعتلال الكلية السكري)</h3>
+                <p>الكلى هي مصفاة الدم؛ السكر المرتفع يجعل هذه المصفاة "تُسرب" بروتينات هامة (الألبومين) ويسمح للسموم بالبقاء في الجسم.</p>
+                <div class="bg-light p-3 rounded">
+                    <strong>خطوات الوقاية الدقيقة:</strong>
+                    <ul class="mt-2">
+                        <li>تحليل <strong>الزلال الدقيق في البول (ACR)</strong> سنوياً؛ هو أول علامة تظهر قبل فشل الكلى بسنوات.</li>
+                        <li>تجنب الإفراط في المسكنات (مثل الإيبوبروفين) لأنها ترهق الكلى المتعبة أصلاً.</li>
+                        <li>شرب كميات كافية من الماء لمساعدة الكلى على طرح السكر الزائد.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="golden-rule text-white p-5 shadow-lg mt-5">
+                <h4 class="text-warning fw-bold mb-4 text-center">
+                    <i class="bi bi-shield-check"></i> قاعدة الحماية الثلاثية (ABC)
+                </h4>
+                <p class="text-center mb-4">الالتزام بهذه الأرقام يعني حماية أعضائك بنسبة تصل إلى 90% بإذن الله:</p>
+                
+                <div class="row g-4 text-center">
+                    <div class="col-md-4">
+                        <div class="p-3 border border-secondary rounded">
+                            <h5 class="text-warning">A - التراكمي</h5>
+                            <p class="mb-0">أقل من 7%</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 border border-secondary rounded">
+                            <h5 class="text-warning">B - الضغط</h5>
+                            <p class="mb-0">أقل من 130/80</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 border border-secondary rounded">
+                            <h5 class="text-warning">C - الكوليسترول</h5>
+                            <p class="mb-0">LDL أقل من 100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="{% url 'diabetes_index' %}" class="btn btn-outline-secondary btn-lg rounded-pill px-5 shadow-sm">
+                    <i class="bi bi-arrow-right-circle me-2"></i> العودة لفهرس الموسوعة
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

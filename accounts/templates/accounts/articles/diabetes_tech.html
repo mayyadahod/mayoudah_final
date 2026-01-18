@@ -1,0 +1,50 @@
+{% extends 'accounts/base_article.html' %}
+
+{% block title %}أحدث تقنيات السكري 2026{% endblock %}
+
+{% block content %}
+<style>
+    .tech-header { background: linear-gradient(135deg, #212529, #495057); color: white; padding: 60px 0; border-radius: 0 0 50px 50px; }
+    .tech-card { border-radius: 20px; overflow: hidden; background: white; margin-bottom: 30px; border: 1px solid #eee; }
+    .tech-img { height: 200px; background-color: #f8f9fa; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #dee2e6; }
+</style>
+
+<header class="tech-header text-center shadow">
+    <div class="container">
+        <h1 class="fw-bold">مستقبل السكري: وداعاً للوخز</h1>
+        <p class="lead text-white-50">تعرف على الحساسات الذكية والمضخات التي غيرت حياة الملايين</p>
+    </div>
+</header>
+
+<div class="container my-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            
+            <div class="tech-card shadow-sm">
+                <div class="tech-img"><i class="bi bi-broadcast"></i></div>
+                <div class="p-4">
+                    <h3 class="fw-bold text-dark">حساسات القياس المستمر (CGM)</h3>
+                    <p>مثل "فري ستايل ليبري" أو "ديكسكوم". عبارة عن قطعة صغيرة توضع على الذراع، تقيس السكر كل دقيقة وترسله لهاتفك مباشرة.</p>
+                    <ul class="text-success">
+                        <li>لا حاجة لوخز الأصابع المتكرر.</li>
+                        <li>تعطيك "تنبيهات" قبل حدوث الهبوط.</li>
+                        <li>ترسم رسماً بيانياً لاتجاه السكر (صاعد أم هابط).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tech-card shadow-sm">
+                <div class="tech-img"><i class="bi bi-device-hdd"></i></div>
+                <div class="p-4">
+                    <h3 class="fw-bold text-dark">مضخات الإنسولين (Insulin Pumps)</h3>
+                    <p>جهاز صغير يضخ الإنسولين باستمرار كأنه "بنكرياس صناعي". يمكن برمجتها لتعطي جرعات دقيقة جداً تناسب نمط حياتك.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="{% url 'diabetes_index' %}" class="btn btn-dark btn-lg rounded-pill px-5">العودة للفهرس</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

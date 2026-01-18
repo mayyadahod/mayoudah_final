@@ -1,0 +1,87 @@
+{% extends 'accounts/base_article.html' %}
+
+{% block title %}دليل المبتدئين لحساب الكربوهيدرات{% endblock %}
+
+{% block content %}
+<style>
+    .carb-header { background: linear-gradient(135deg, #17a2b8, #117a8b); color: white; padding: 60px 0; border-radius: 0 0 50px 50px; margin-bottom: 40px; }
+    .content-section { background: white; padding: 30px; border-radius: 15px; margin-bottom: 25px; border-right: 6px solid #17a2b8; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .step-box { background: #f0faff; border: 1px solid #b8daff; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+    .carb-unit { font-size: 1.2rem; color: #117a8b; font-weight: bold; }
+    .math-example { background-color: #f8f9fa; border-left: 5px solid #17a2b8; padding: 15px; font-family: 'Courier New', Courier, monospace; }
+</style>
+
+<header class="carb-header text-center shadow">
+    <div class="container">
+        <h1 class="display-6 fw-bold">حساب الكربوهيدرات: دليلك للسيطرة المطلقة</h1>
+        <p class="lead">تعلم كيف تحسب نشويات وجبتك لتحدد جرعتك بدقة</p>
+    </div>
+</header>
+
+<div class="container pb-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+
+            <section class="content-section">
+                <h2>ماذا يعني حساب الكربوهيدرات؟</h2>
+                <p>الكربوهيدرات هي المغذيات الأساسية التي تتحول إلى جلوكوز (سكر) في الدم بعد الهضم. حسابها يعني معرفة كمية "الجرام" من النشويات في كل صنف نأكله.
+                <br><strong>القاعدة الأساسية:</strong> كلما زادت الكربوهيدرات، زادت الحاجة للإنسولين وزاد ارتفاع السكر.</p>
+            </section>
+
+            <section class="content-section">
+                <h2>1. التعرف على "وحدة الكربوهيدرات"</h2>
+                <p>لتسهيل الحساب، نستخدم مفهوم "الحصة" أو "المبادلة".</p>
+                <div class="step-box">
+                    <span class="carb-unit">1 حصة كربوهيدرات = 15 جرام كربوهيدرات</span>
+                </div>
+                <h5>أمثلة على حصة واحدة (15 جرام):</h5>
+                <ul>
+                    <li>نصف كوب أرز مطبوخ.</li>
+                    <li>ثمرة فاكهة صغيرة (بحجم قبضة اليد).</li>
+                    <li>شريحة واحدة من خبز التوست.</li>
+                    <li>كوب واحد من الحليب أو الزبادي.</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>2. كيف تقرأ الملصق الغذائي؟</h2>
+                <p>عند شراء منتج معلب، ابحث دائماً عن "إجمالي الكربوهيدرات" (Total Carbohydrates).</p>
+                <div class="math-example">
+                    <strong>مثال:</strong> إذا كان كيس البسكويت يحتوي على:
+                    <br>- إجمالي الكربوهيدرات: 30 جرام.
+                    <br>- حجم الحصة: الكيس بالكامل.
+                    <br><strong>إذن:</strong> هذا الكيس يعادل <strong>حصتين</strong> (30 ÷ 15 = 2).
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>3. الأطعمة التي لا نحسب كربوهيدراتها</h2>
+                <p>هناك أطعمة لا ترفع سكر الدم بشكل ملحوظ (أقل من 5 جرام لكل حصة) ولا تدخل في الحساب عادةً:</p>
+                <ul>
+                    <li>البروتينات (اللحوم، الدجاج، الأسماك، البيض).</li>
+                    <li>الدهون الصحية (زيت الزيتون، الزبدة الطبيعية).</li>
+                    <li>الخضروات الورقية (الخس، الخيار، الجرجير).</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>4. معامل الإنسولين (للمتقدمين)</h2>
+                <p>بعد إتقان الحساب، سيعطيك طبيبك رقماً يسمى "معامل الإنسولين" (Insulin-to-Carb Ratio). 
+                <br>مثلاً: إذا كان معاملك 1:10، فهذا يعني أنك تحتاج وحدة إنسولين واحدة لكل 10 جرام كربوهيدرات.</p>
+            </section>
+
+            <div class="alert alert-info mt-5 shadow-sm border-0 d-flex align-items-center">
+                <i class="bi bi-info-circle-fill fs-3 me-3"></i>
+                <div>
+                    <strong>نصيحة للمبتدئين:</strong> استخدم تطبيقات الهاتف (مثل MyFitnessPal) أو الموازين الرقمية في البداية لتقدير الكميات بالجرام حتى تعتاد عينك على تقدير الكمية بالنظر.
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="{% url 'diabetes_index' %}" class="btn btn-info btn-lg px-5 shadow-sm rounded-pill text-white fw-bold">العودة لفهرس الموسوعة</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

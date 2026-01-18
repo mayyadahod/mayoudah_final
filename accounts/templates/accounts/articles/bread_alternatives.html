@@ -1,0 +1,86 @@
+{% extends 'accounts/base_article.html' %}
+
+{% block title %}بدائل الخبز والدقيق لمرضى السكري - الدليل الشامل{% endblock %}
+
+{% block content %}
+<style>
+    .bread-header { background: linear-gradient(135deg, #856404, #533f03); color: white; padding: 60px 0; border-radius: 0 0 50px 50px; margin-bottom: 40px; }
+    .content-section { background: white; padding: 30px; border-radius: 15px; margin-bottom: 25px; border-right: 6px solid #856404; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .alternative-card { border: 1px solid #ffeeba; background-color: #fffceb; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+    .vs-box { display: flex; align-items: center; justify-content: center; margin: 30px 0; background: #f8f9fa; border-radius: 50px; padding: 10px; }
+    .bad-food { color: #dc3545; font-weight: bold; }
+    .good-food { color: #198754; font-weight: bold; }
+</style>
+
+<header class="bread-header text-center shadow">
+    <div class="container">
+        <h1 class="display-6 fw-bold">وداعاً للدقيق الأبيض: بدائل الخبز الذكية</h1>
+        <p class="lead">كيف تستمتع بوجباتك دون أن ترفع سكر دمك؟</p>
+    </div>
+</header>
+
+<div class="container pb-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+
+            <section class="content-section">
+                <h2>لماذا الدقيق الأبيض "عدو" لمريض السكري؟</h2>
+                <p>الدقيق الأبيض (المكرر) هو دقيق منزوع القشرة (النخالة). بمجرد دخوله الجسم، يتحول بسرعة البرق إلى جلوكوز، مما يسبب ارتفاعاً حاداً ومفاجئاً في السكر. هذا الارتفاع يرهق البنكرياس ويؤدي لتخزين الدهون.</p>
+                
+                <div class="vs-box shadow-sm">
+                    <span class="bad-food px-3 text-center small">الخبز الأبيض (صدمة سكرية)</span>
+                    <span class="badge bg-secondary">VS</span>
+                    <span class="good-food px-3 text-center small">الحبوب الكاملة (امتصاص بطيء)</span>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>أفضل البدائل الصحية والمتاحة</h2>
+                
+                <div class="alternative-card">
+                    <h5 class="fw-bold text-dark"><i class="bi bi-check2-circle text-success"></i> 1. خبز الشوفان (Oat Bread)</h5>
+                    <p>يحتوي الشوفان على ألياف "بيتا جلوكان" التي تذوب في الماء وتتحول لمادة هلامية تبطئ امتصاص السكر وتشعرك بالشبع لفترات طويلة.</p>
+                </div>
+
+                <div class="alternative-card">
+                    <h5 class="fw-bold text-dark"><i class="bi bi-check2-circle text-success"></i> 2. خبز الشعير (Barley Bread)</h5>
+                    <p>الشعير هو "صديق مريض السكري" الأول. مؤشره الجلايسيمي منخفض جداً مقارنة بالقمح، ويساعد في تنظيم مستويات السكر الصائم.</p>
+                </div>
+
+                <div class="alternative-card">
+                    <h5 class="fw-bold text-dark"><i class="bi bi-check2-circle text-success"></i> 3. خبز الحبوب الكاملة (الخبز الأسمر بالنخالة)</h5>
+                    <p>تأكد أن الخبز يحتوي على النخالة الكاملة (الردة). النخالة تعمل كحاجز طبيعي يمنع السكر من الاندفاع سريعاً لمجرى الدم.</p>
+                </div>
+
+                <div class="alternative-card">
+                    <h5 class="fw-bold text-dark"><i class="bi bi-star-fill text-warning"></i> 4. بدائل "الكيتو" (للمتقدمين)</h5>
+                    <p>استخدام دقيق اللوز أو دقيق جوز الهند لصنع الخبز. هذه الأنواع تكاد لا تحتوي على كربوهيدرات نهائياً، وهي خيار ممتاز للسيطرة المطلقة.</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>نصائح عند الشراء والمواصفات</h2>
+                <ul>
+                    <li><strong>تجنب "اللون البني" الكاذب:</strong> بعض المخابز تضع صبغة أو عسل أسود لتلوين الخبز. ابحث عن كلمة "حبوب كاملة 100%" أو "نخالة".</li>
+                    <li><strong>السمك يفرق:</strong> كلما كان الخبز رقيقاً (مثل الخبز اللبناني الأسمر الرقيق)، قلت كمية الكربوهيدرات التي تتناولها.</li>
+                    <li><strong>قاعدة التجميد:</strong> تجميد الخبز ثم إعادة تسخينه يغير من بنية النشا ويجعله أبطأ في الامتصاص (نشا مقاوم).</li>
+                </ul>
+            </section>
+
+            <div class="alert alert-warning mt-5 shadow-sm border-0">
+                <div class="d-flex">
+                    <i class="bi bi-lightbulb-fill fs-3 me-3"></i>
+                    <div>
+                        <strong>قاعدة ذهبية:</strong> حتى مع البدائل الصحية، الكمية هي المفتاح. شريحة واحدة من خبز الحبوب الكاملة تكفي كحصة واحدة في الوجبة.
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="{% url 'diabetes_index' %}" class="btn btn-warning btn-lg px-5 shadow-sm rounded-pill fw-bold">العودة لفهرس الموسوعة</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

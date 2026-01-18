@@ -1,0 +1,59 @@
+{% extends 'accounts/base_article.html' %}
+
+{% block title %}قاعدة 15-15 لعلاج هبوط السكر{% endblock %}
+
+{% block content %}
+<style>
+    .emergency-header { background: linear-gradient(135deg, #ffc107, #e0a800); color: #212529; padding: 60px 0; border-radius: 0 0 50px 50px; }
+    .step-card { border: 2px solid #ffc107; border-radius: 15px; padding: 20px; margin-bottom: 20px; background: #fffdf5; }
+    .symptom-badge { background: #eee; padding: 5px 15px; border-radius: 20px; margin: 5px; display: inline-block; }
+</style>
+
+<header class="emergency-header text-center shadow">
+    <div class="container">
+        <h1 class="fw-bold">هبوط السكر: كيف تنقذ الموقف في دقائق؟</h1>
+        <p class="lead text-dark">دليل تطبيق قاعدة 15-15 العالمية لرفع السكر بأمان</p>
+    </div>
+</header>
+
+<div class="container my-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <div class="alert alert-danger mb-4"><strong>تحذير:</strong> هبوط السكر (أقل من 70 ملغ) أخطر من ارتفاعه، التصرف السريع يمنع الغيبوبة.</div>
+
+            <h3>أعراض يجب ألا تتجاهلها:</h3>
+            <div class="mb-4">
+                <span class="symptom-badge">رعشة اليدين</span> <span class="symptom-badge">تعرق بارد</span> 
+                <span class="symptom-badge">خفقان القلب</span> <span class="symptom-badge">جوع شديد</span> 
+                <span class="symptom-badge">دوخة وتنميل</span>
+            </div>
+
+            <div class="step-card shadow-sm">
+                <h4 class="text-warning-emphasis">الخطوة 1: تناول 15 جرام كربوهيدرات سريعة</h4>
+                <p>تناول أحد الخيارات التالية فوراً:
+                <ul>
+                    <li>نصف كوب عصير محلى (عنب أو برتقال).</li>
+                    <li>ملعقة كبيرة من العسل أو السكر المذاب في ماء.</li>
+                    <li>3-4 أقراص جلوكوز مخصصة.</li>
+                </ul>
+                <small class="text-danger">* تجنب الشوكولاتة لأن الدهون فيها تبطئ امتصاص السكر.</small>
+                </p>
+            </div>
+
+            <div class="step-card shadow-sm">
+                <h4 class="text-warning-emphasis">الخطوة 2: الانتظار لمدة 15 دقيقة</h4>
+                <p>اجلس وارتح تماماً. انتظر 15 دقيقة ليعطي السكر مفعوله في الدم، ثم قم بالقياس مرة أخرى.</p>
+            </div>
+
+            <div class="step-card shadow-sm">
+                <h4 class="text-warning-emphasis">الخطوة 3: التقييم أو التكرار</h4>
+                <p>إذا كانت القراءة لا تزال أقل من 70، كرر الخطوة الأولى (15 جرام سكر) وانتظر مرة أخرى. إذا استقر السكر، تناول وجبة خفيفة تحتوي على بروتين (مثل قطعة خبز وجبن) للحفاظ على ثباته.</p>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="{% url 'diabetes_index' %}" class="btn btn-warning btn-lg rounded-pill px-5">العودة للفهرس</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
