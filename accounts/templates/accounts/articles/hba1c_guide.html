@@ -1,0 +1,94 @@
+{% extends 'accounts/base_article.html' %}
+
+{% block title %}الدليل الشامل لفحص السكر التراكمي - HbA1c{% endblock %}
+
+{% block content %}
+<style>
+    .hba1c-header { background: linear-gradient(135deg, #6f42c1, #4e227e); color: white; padding: 60px 0; border-radius: 0 0 50px 50px; margin-bottom: 40px; }
+    .content-section { background: white; padding: 30px; border-radius: 15px; margin-bottom: 25px; border-right: 6px solid #6f42c1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .percentage-card { border-radius: 15px; background: #f8f9fa; padding: 20px; text-align: center; border: 1px solid #dee2e6; height: 100%; }
+    .level-good { color: #198754; font-size: 1.5rem; font-weight: bold; }
+    .level-caution { color: #fd7e14; font-size: 1.5rem; font-weight: bold; }
+    .level-high { color: #dc3545; font-size: 1.5rem; font-weight: bold; }
+</style>
+
+<header class="hba1c-header text-center shadow">
+    <div class="container">
+        <h1 class="display-5 fw-bold">السكر التراكمي: ذاكرة جسدك التي لا تخطئ</h1>
+        <p class="lead">ما هو فحص HbA1c؟ وكيف تسيطر على مستوياته لتضمن حياة صحية؟</p>
+    </div>
+</header>
+
+<div class="container pb-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+
+            <section class="content-section">
+                <h2>أولاً: ما هو السكر التراكمي علمياً؟</h2>
+                <p>السكر التراكمي (Hemoglobin A1c) ليس فحصاً عادياً للسكر في لحظة معينة، بل هو فحص يقيس نسبة السكر المرتبط بـ <strong>الهيموجلوبين</strong> في خلايا الدم الحمراء.</p>
+                <p>بما أن عمر خلية الدم الحمراء يبلغ حوالي 120 يوماً، فإن هذا الفحص يعطينا <strong>متوسط مستويات السكر في دمك خلال آخر 2 إلى 3 أشهر</strong>. لذا، لا يمكن خداع هذا الفحص بالصيام قبل التحليل بيوم واحد!</p>
+            </section>
+
+            
+
+            <section class="content-section text-center">
+                <h2>ثانياً: جدول قراءة النتائج (كيف تفهم رقمك؟)</h2>
+                <div class="row g-3 mt-3">
+                    <div class="col-md-4">
+                        <div class="percentage-card">
+                            <h5 class="text-muted">طبيعي</h5>
+                            <p class="level-good">أقل من 5.7%</p>
+                            <small>أنت في النطاق الآمن تماماً.</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="percentage-card border-warning">
+                            <h5 class="text-muted">ما قبل السكري</h5>
+                            <p class="level-caution">5.7% - 6.4%</p>
+                            <small>جرس إنذار! تحتاج لتعديل نمط حياتك فوراً.</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="percentage-card border-danger">
+                            <h5 class="text-muted">سكري</h5>
+                            <p class="level-high">6.5% أو أكثر</p>
+                            <small>يتطلب متابعة طبية وخطة علاجية دقيقة.</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <section class="content-section">
+                <h2>ثالثاً: لماذا يهتم الأطباء بهذا الرقم؟</h2>
+                <p>أثبتت الدراسات العالمية أن خفض نسبة السكر التراكمي بمقدار 1% فقط (مثلاً من 8% إلى 7%) يقلل من مخاطر:</p>
+                <ul>
+                    <li><strong>أمراض الكلى:</strong> بنسبة 25%.</li>
+                    <li><strong>تلف الأعصاب:</strong> بنسبة 40%.</li>
+                    <li><strong>أمراض العين (الشبكية):</strong> بنسبة 35%.</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>رابعاً: كيف تخفض السكر التراكمي بطريقة طبيعية؟</h2>
+                <ol>
+                    <li><strong>الالتزام بقاعدة الألياف:</strong> تناول الخضروات في بداية كل وجبة يمنع الارتفاعات الحادة في السكر (Spikes)، مما يخفض المتوسط التراكمي.</li>
+                    <li><strong>المشي بعد الأكل:</strong> المشي لمدة 15 دقيقة بعد الوجبات يساعد العضلات على حرق الجلوكوز مباشرة.</li>
+                    <li><strong>شرب الماء بانتظام:</strong> يساعد الكلى على تصريف السكر الزائد.</li>
+                    <li><strong>تجنب التوتر:</strong> هرمون الكورتيزول الناتج عن التوتر يرفع السكر حتى لو لم تأكل!</li>
+                </ol>
+            </section>
+
+            <div class="alert alert-info mt-5 shadow-sm">
+                <strong>ملاحظة هامة:</strong> يُنصح مريض السكري بإجراء هذا الفحص كل 3 إلى 6 أشهر بانتظام.
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="{% url 'diabetes_index' %}" class="btn btn-purple btn-lg px-5 shadow-sm rounded-pill text-white" style="background-color: #6f42c1;">العودة لفهرس الموسوعة</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,113 @@
+{% extends 'accounts/base_article.html' %}
+
+{% block title %}جدول مستويات السكر الطبيعية - الدليل الكامل{% endblock %}
+
+{% block content %}
+<style>
+    .levels-header { background: linear-gradient(135deg, #007bff, #0056b3); color: white; padding: 60px 0; border-radius: 0 0 50px 50px; margin-bottom: 40px; }
+    .content-section { background: white; padding: 30px; border-radius: 15px; margin-bottom: 25px; border-right: 6px solid #007bff; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .table-container { border-radius: 15px; overflow: hidden; box-shadow: 0 0 20px rgba(0,0,0,0.05); margin: 20px 0; }
+    .table thead { background-color: #007bff; color: white; }
+    .status-normal { color: #198754; font-weight: bold; background-color: #e8f5e9; }
+    .status-warning { color: #fd7e14; font-weight: bold; background-color: #fff3e0; }
+    .status-danger { color: #dc3545; font-weight: bold; background-color: #ffebee; }
+    .note-box { border-right: 5px solid #ffc107; background: #fff9e6; padding: 15px; border-radius: 8px; }
+</style>
+
+<header class="levels-header text-center shadow">
+    <div class="container">
+        <h1 class="display-5 fw-bold">دليلك الكامل لمستويات سكر الدم</h1>
+        <p class="lead">كيف تقرأ أرقامك بشكل صحيح؟ وما هي الأهداف المطلوب تحقيقها؟</p>
+    </div>
+</header>
+
+<div class="container pb-5 text-end">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+
+            <section class="content-section">
+                <h2>أولاً: جدول القياسات التشخيصي (للجميع)</h2>
+                <p>هذا الجدول يوضح التصنيف الطبي بناءً على القراءات سواء كنت صائماً أو بعد الأكل بساعتين:</p>
+                
+                <div class="table-container text-center">
+                    <table class="table table-bordered align-middle">
+                        <thead>
+                            <tr>
+                                <th>الحالة الصحية</th>
+                                <th>صائم (8 ساعات)</th>
+                                <th>بعد الأكل (ساعتين)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="status-normal">
+                                <td>طبيعي (سليم)</td>
+                                <td>70 - 99 ملغ/دسل</td>
+                                <td>أقل من 140 ملغ/دسل</td>
+                            </tr>
+                            <tr class="status-warning">
+                                <td>مرحلة ما قبل السكري</td>
+                                <td>100 - 125 ملغ/دسل</td>
+                                <td>140 - 199 ملغ/دسل</td>
+                            </tr>
+                            <tr class="status-danger">
+                                <td>مصاب بالسكري</td>
+                                <td>126 ملغ/دسل أو أكثر</td>
+                                <td>200 ملغ/دسل أو أكثر</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            
+
+            <section class="content-section">
+                <h2>ثانياً: الأهداف المستهدفة (لمريض السكري)</h2>
+                <p>إذا كنت مشخصاً بالسكري بالفعل، فالهدف ليس العودة للأرقام الطبيعية تماماً، بل البقاء ضمن "النطاق الآمن" لتجنب المضاعفات:</p>
+                <div class="note-box mt-3">
+                    <strong>المستهدف اليومي لمريض السكري:</strong>
+                    <ul>
+                        <li><strong>قبل الوجبات:</strong> بين 80 - 130 ملغ/دسل.</li>
+                        <li><strong>بعد الوجبة بساعتين:</strong> أقل من 180 ملغ/دسل.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>ثالثاً: متى يكون الرقم خطيراً؟</h2>
+                <p>يجب التصرف فوراً إذا ظهرت هذه الأرقام على جهازك:</p>
+                <div class="row text-center mt-3">
+                    <div class="col-md-6 mb-3">
+                        <div class="p-3 border border-danger rounded status-danger shadow-sm">
+                            <h5>هبوط حاد</h5>
+                            <p class="h3">أقل من 70</p>
+                            <small>اتبع قاعدة 15-15 فوراً</small>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="p-3 border border-dark rounded bg-dark text-white shadow-sm">
+                            <h5>ارتفاع شديد</h5>
+                            <p class="h3">أكثر من 250</p>
+                            <small>خطر الحموضة الكيتونية - استشر طبيبك</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>رابعاً: نصائح لقياس دقيق بالمنزل</h2>
+                <ul>
+                    <li>اغسل يديك وجففهما جيداً (بقايا الطعام أو السكر على إصبعك ترفع القراءة كذباً).</li>
+                    <li>تأكد من تاريخ صلاحية شرائط الفحص.</li>
+                    <li>لا تقم بالعصر الشديد للإصبع لإخراج الدم لأن ذلك يخفف العينة بسوائل الأنسجة.</li>
+                </ul>
+            </section>
+
+            <div class="text-center mt-5">
+                <a href="{% url 'diabetes_index' %}" class="btn btn-primary btn-lg px-5 shadow-sm rounded-pill">العودة لفهرس الموسوعة</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
